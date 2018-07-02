@@ -24,3 +24,8 @@ img {
 #time {
   font-size: 100px;
 }
+
+#time_bar {
+  position: absolute;
+  margin-top: 10%;
+}
