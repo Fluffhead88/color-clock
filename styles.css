@@ -11,3 +11,16 @@ body {
 img {
   width: 100%;
 }
+
+#Clock {
+  position: relative;
+  height: 50%;
+  top: 50%;
+  margin-top: 20%;
+  text-align: center;
+  color: white;
+}
+
+#time {
+  font-size: 100px;
+}
