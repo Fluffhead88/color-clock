@@ -21,16 +21,19 @@ function displayClock() {
   // sets read out for time
   var time = h + ":" + m + ":" + s;
   // sets the value for the hex color for the background color
-  var color = "#" + s + m + h;
-
+  var color = "#" + s + m;
+  console.log(time);
+  console.log(color);
   // sets body background style to hex number generated above
   document.body.style.background = color;
   // changes the HTML value of the time ID to the current time
   document.querySelector('#time').innerHTML = time;
 
   // creates a percentage value of the current minute and creates a bar based on that
-  minute_percent = (s / 60) * 100;
-  bar = "_" * minute_percent;
+
+  minute_percent = (Number(s) / 60) * 100;
+  let bar = "_".repeat(minute_percent);
+  console.log(bar);
 
   // places the time bar on the page
   document.querySelector('#time_bar').innerHTML = bar;

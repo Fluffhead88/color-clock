@@ -13,9 +13,6 @@ img {
 }
 
 #Clock {
-  position: relative;
-  height: 50%;
-  top: 50%;
   margin-top: 20%;
   text-align: center;
   color: white;
@@ -26,6 +23,5 @@ img {
 }
 
 #time_bar {
-  position: absolute;
-  margin-top: 10%;
+  margin-top: 5%;
 }
