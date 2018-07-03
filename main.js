@@ -27,7 +27,7 @@ function displayClock() {
   // sets body background style to hex number generated above
   document.body.style.background = color;
   // changes the HTML value of the time ID to the current time
-  document.querySelector('#time').innerHTML = time;
+  document.querySelector('#time').textContent = time;
 
   // creates a percentage value of the current minute and creates a bar based on that
 
@@ -36,8 +36,8 @@ function displayClock() {
   console.log(bar);
 
   // places the time bar on the page
-  document.querySelector('#time_bar').innerHTML = bar;
-}
+  document.querySelector('#time_bar').textContent = bar;
+};
 
 // updates the clock every second
 setInterval(displayClock, 1000);
