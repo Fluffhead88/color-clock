@@ -1,12 +1,14 @@
 // function to display the current time with a background color that changes
 // with time
 
+var isHovering = false;
+
 function displayClock() {
   // gets the current date and strips all info except hours, minutes, and seconds
-  var date = new Date(),
-    h = date.getHours(),
-    m = date.getMinutes(),
-    s = date.getSeconds();
+  var date = new Date();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds();
   // add leading zeros to h,m &s values that are less than 10
   if (h < 10) {
     h = "0" + h;
@@ -37,6 +39,20 @@ function displayClock() {
 
   // places the time bar on the page
   document.querySelector('#time_bar').textContent = bar;
+
+
+  document.querySelector('#time').onmouseover = function() {
+    isHovering = true;
+  };
+  document.querySelector('#time').onmouseout = function() {
+    isHovering = false;
+  };
+
+  if (isHovering) {
+    document.querySelector('#time').textContent = color;
+  };
+  console.log(isHovering)
+
 };
 
 // updates the clock every second
